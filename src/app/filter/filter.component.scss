@@ -1,0 +1,21 @@
+.mat-toolbar {
+    margin-bottom: 16px;
+  }
+  
+  .sidebar {
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }

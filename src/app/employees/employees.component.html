@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <span style="font-size: 12px"
+    >{{ employeeFacade.employeeCount$ | async }} Results found</span
+  >
+  <span class="spacer"></span>
+  <mat-checkbox
+    (change)="locationChecked($event.checked)"
+    [checked]="(employeeFacade.employeeLocationFilter$ | async) === 'bangalore'"
+    ><span style="font-size: 12px"
+      >Show only Bangalore employees</span
+    ></mat-checkbox
+  >
+</mat-toolbar>
+<div class="card-container">
+  <app-employee
+    class="card"
+    *ngFor="let employee of employeeFacade.employees$ | async; let i = index"
+    [employee]="employee"
+    [index]="i"
+  ></app-employee>
+</div>

@@ -1,0 +1,82 @@
+.example-header-image {
+  background-image: url("./img2.jpg");
+  background-size: cover;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin: 10px;
+}
+
+.key-text {
+  font-size:10px;
+  color: darkgrey;
+}
+.value-text {
+  font-size:10px;
+}
+
+.star-rating {
+  margin-left: 10px;
+  cursor: pointer;
+ 
+}
+.star-filled {
+  color: gold;
+font-size: 20px;
+
+}
+.star-unfilled {
+  color: grey;
+  font-size: 20px;
+
+}
+
+.star-half-filled {
+  color: transparent;
+  background: linear-gradient(to right, gold 50%, grey 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 20px;
+}
+.custom-icon{
+  outline: lightgrey solid 2px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.phone{
+  color:cadetblue;
+}
+.email{
+  color:brown;
+}
+
+.message{
+  color:grey;
+}
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  font-size: 20px;
+}
+.designation{
+  font-size: 15px;
+}
+
+.messaging-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+
+
+
+

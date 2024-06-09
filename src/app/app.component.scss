@@ -1,0 +1,43 @@
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-content mat-icon {
+  margin-right: 4px; /* Adjust the spacing between icons */
+}
+mat-toolbar{
+  background: #fff;
+  .team-select{
+    border-radius: 5px;
+    margin-left: 15px;
+  }
+}
+.spacer {
+    flex: 1 1 auto;
+  }
+  .container {
+    width: auto;
+    height:100vh;
+  
+  }
+  .side-menu{
+    width: 200px;
+    background: #fff;
+  }
+  .sec-side-menu{
+    margin-left: 200px;
+    width: 300px;
+    background: #fff;
+  }
+  .main-content {
+   margin-left:200px;
+    padding: 16px;
+    transition: width 0.3s ease;
+    transition: margin 0.3s ease;
+  }
+  
+  .shrink-content .main-content {
+   margin-left:500px;
+    width: calc(100% - 500px);
+  }

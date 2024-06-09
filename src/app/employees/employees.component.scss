@@ -1,0 +1,20 @@
+.card-container {
+    display: flex;
+    flex-wrap:wrap;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 5px;
+  }
+
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }

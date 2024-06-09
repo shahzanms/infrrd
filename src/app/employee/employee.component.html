@@ -1,0 +1,120 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title class="name">{{ employee.name }}</mat-card-title>
+    <mat-card-subtitle class="designation">{{
+      employee.designation | capitalizeWords
+    }}</mat-card-subtitle>
+    <span class="rating-container" style="float: right">
+      <button mat-icon-button [matMenuTriggerFor]="messagingMenu">
+        <mat-icon>send</mat-icon>
+      </button>
+
+      <mat-menu #messagingMenu="matMenu">
+        <div class="messaging-icons-grid">
+          <button mat-icon-button>
+            <mat-icon>email</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>facebook</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>contact_phone</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>bolt</mat-icon>
+          </button>
+        </div>
+      </mat-menu>
+    </span>
+  </mat-card-header>
+  <div class="rating-container">
+    <span class="key-text">{{ employee.rating }} Rating</span>
+    <div class="star-rating">
+      <mat-icon
+        (click)="rate(1)"
+        [ngClass]="{
+          'star-unfilled': employee.rating < 1,
+          'star-filled': employee.rating >= 1,
+          'star-half-filled': employee.rating === 0.5
+        }"
+        >grade</mat-icon
+      >
+      <mat-icon
+        (click)="rate(2)"
+        [ngClass]="{
+          'star-unfilled': employee.rating < 2,
+          'star-filled': employee.rating >= 2,
+          'star-half-filled': employee.rating === 1.5
+        }"
+        >grade</mat-icon
+      >
+      <mat-icon
+        (click)="rate(3)"
+        [ngClass]="{
+          'star-unfilled': employee.rating < 3,
+          'star-filled': employee.rating >= 3,
+          'star-half-filled': employee.rating === 2.5
+        }"
+        >grade</mat-icon
+      >
+      <mat-icon
+        (click)="rate(4)"
+        [ngClass]="{
+          'star-unfilled': employee.rating < 4,
+          'star-filled': employee.rating >= 4,
+          'star-half-filled': employee.rating === 3.5
+        }"
+        >grade</mat-icon
+      >
+      <mat-icon
+        (click)="rate(5)"
+        [ngClass]="{
+          'star-unfilled': employee.rating < 5,
+          'star-filled': employee.rating >= 5,
+          'star-half-filled': employee.rating === 4.5
+        }"
+        >grade</mat-icon
+      >
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="rating-container">
+    <span
+      ><span class="key-text"> Experience :</span>
+
+      <span class="value-text">{{ employee.experience }} Years</span>
+    </span>
+    <span
+      ><span class="key-text"> Date of Joining :</span>
+      <span class="value-text">{{ employee.yearOfJoining }} </span>
+    </span>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="rating-container">
+    <span
+      ><span class="key-text"> Current team :</span>
+      <span class="value-text">{{ employee.team | capitalizeWords }} </span>
+    </span>
+  </div>
+  <mat-divider></mat-divider>
+
+  <div class="rating-container">
+    <span
+      ><span class="key-text"> Reporting Manager :</span>
+      <span class="value-text">{{ employee.reportingManager }} </span>
+    </span>
+  </div>
+  <mat-divider></mat-divider>
+
+  <mat-card-actions class="bottom-container">
+    <span class="rating-container">
+      <mat-icon class="custom-icon phone">call</mat-icon>
+      <span class="value-text">{{ employee.phone }}</span>
+    </span>
+    <span class="rating-container">
+      <mat-icon class="custom-icon email">mail</mat-icon>
+      <span class="value-text">{{ employee.email }}</span>
+    </span>
+  </mat-card-actions>
+</mat-card>

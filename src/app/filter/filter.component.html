@@ -1,0 +1,28 @@
+<div class="sidebar">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let controlName of formControlNames">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ controlName | capitalizeWords }}</mat-label>
+        <mat-select [formControlName]="controlName">
+          <mat-option
+            *ngFor="let option of options[controlName]"
+            [value]="option.value"
+          >
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="buttons">
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+      <button mat-flat-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

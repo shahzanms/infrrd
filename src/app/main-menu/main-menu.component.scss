@@ -1,0 +1,14 @@
+.item-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    mat-icon{
+        color:#349b68;
+    }
+    [mat-line]{ color:#349b68;}
+  }
+
+  .active-link {
+    background-color: rgba(63, 81, 181, 0.1); 
+  }
